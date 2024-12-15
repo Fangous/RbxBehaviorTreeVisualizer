@@ -1,22 +1,10 @@
 {
   "name": "RbxBehaviorTreeVisualizer",
   "tree": {
-    "$className": "DataModel",
+    "$path": "src",
 
-    "Workspace": {
-      "$properties": {
-        "FilteringEnabled": true
-      },
-
-      "RbxBehaviorTreeVisualizer": {
-        "$path": "src"
-      }
-    },
-
-    "ReplicatedStorage": {
-      "Packages": {
-        "$path": "Packages/"
-      }
+    "Packages": {
+      "$path": "Packages"
     }
   }
 }
