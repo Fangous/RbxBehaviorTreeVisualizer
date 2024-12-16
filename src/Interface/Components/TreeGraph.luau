@@ -84,7 +84,6 @@ local function buildTree(node: RbxBehaviorTree.Node, x: number, y: number)
 		local childX = childXOffset + subtreeWidth / 2
 		local childY = y + NODE_Y_SPACING
 
-		-- Add line and child node elements directly to `elements`
 		table.insert(
 			elements,
 			createLine(x + NODE_X_SPACING / 2, y + NODE_X_SPACING, childX + NODE_X_SPACING / 2, childY)
