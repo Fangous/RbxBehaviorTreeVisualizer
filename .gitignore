@@ -8,6 +8,9 @@
 # Wally lock file
 /wally.lock
 
+# Lock files
+/*.lock
+
 # Wally files
 /Packages
 
