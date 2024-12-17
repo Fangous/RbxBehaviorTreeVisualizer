@@ -88,13 +88,13 @@ local function initPlugin()
 		State.SelectedTreeNode(Util.GetNodeFromSelection())
 	end)
 
-	Util.Print(`[{pluginFullName}] Enabled plugin!`)
+	Util.Print("Enabled plugin!")
 end
 
 if isClient then
 	if isStudio and isEdit then
 		initPlugin()
 	else
-		Util.Warn(`[{pluginFullName}] Disabled plugin during Run mode!`)
+		Util.Warn("Disabled plugin during Run mode!")
 	end
 end
