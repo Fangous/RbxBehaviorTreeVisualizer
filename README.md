@@ -1,6 +1,6 @@
 # RbxBehaviorTreeVisualizer
 
-A Roblox Studio plugin for visualizing and debugging behavior trees created with [RbxBehaviorTree](https://github.com/Fangous/RbxBehaviorTree/).
+A Roblox Studio plugin for visualizing and debugging behavior trees created with the [RbxBehaviorTree](https://github.com/Fangous/RbxBehaviorTree/) package.
 
 ## Installation
 
