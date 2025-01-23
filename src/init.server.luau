@@ -24,7 +24,6 @@ local cleanup = Vide.cleanup
 
 local pluginFullName = `{PLUGIN_NAME} v{VERSION}`
 local camera = Workspace.Camera
-local widgetInfo = DockWidgetPluginGuiInfo.new(Enum.InitialDockState.Left, false, false, 200, 300, 200, 200)
 local pluginTrove = Trove.new()
 local viewTrove = pluginTrove:Extend()
 local isClient = RunService:IsClient()
@@ -52,6 +51,7 @@ end
 
 local function initPlugin()
 	local toolbar = plugin:CreateToolbar(pluginFullName)
+	local widgetInfo = DockWidgetPluginGuiInfo.new(Enum.InitialDockState.Left, false, false, 200, 300, 200, 200)
 	local widgetButton = toolbar:CreateButton("Open Widget", "Open RbxBehaviorTreeVisualizer widget", PLUGIN_ICON)
 	local widget = plugin:CreateDockWidgetPluginGui(pluginFullName, widgetInfo)
 
