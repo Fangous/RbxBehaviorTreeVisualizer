@@ -107,13 +107,11 @@ return function(props: Props)
 	local framePosition = source(UDim2.fromOffset(startX, startY))
 	local scale = source(1)
 	local dragging = false
-	local dragStartPosition = Vector3.new(0, 0, 0)
 	local offset = UDim2.fromOffset(0, 0)
 
 	local inputBeganConnection = UserInputService.InputBegan:Connect(function(input: InputObject)
 		if input.UserInputType == Enum.UserInputType.MouseButton1 then
 			dragging = true
-			dragStartPosition = input.Position
 			offset = framePosition() - UDim2.fromOffset(input.Position.X, input.Position.Y)
 		end
 	end)

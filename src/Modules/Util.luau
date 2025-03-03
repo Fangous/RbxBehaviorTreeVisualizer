@@ -12,6 +12,11 @@ local PLUGIN_EXTENSION = Constants.PLUGIN_EXTENSION
 
 local pluginFullName = `{PLUGIN_NAME} v{VERSION}`
 
+export type SelectedNodeInfo = {
+	Name: string,
+	Node: RbxBehaviorTree.Node,
+}
+
 local Util = {}
 
 function Util.Print(message: string)
@@ -61,7 +66,7 @@ function Util.GetNodeFromValidModule(module: ModuleScript): RbxBehaviorTree.Node
 	return nil
 end
 
-function Util.GetNodeFromSelection(): RbxBehaviorTree.Node?
+function Util.GetSelectedNodeInfoFromSelection(): SelectedNodeInfo?
 	local currentSelection = Util.GetSingularInstanceSelected()
 
 	if not (currentSelection and currentSelection:IsA("ModuleScript")) then
@@ -73,7 +78,10 @@ function Util.GetNodeFromSelection(): RbxBehaviorTree.Node?
 	end
 
 	local selectedNode = Util.GetNodeFromValidModule(currentSelection)
-	return selectedNode
+	return {
+		Name = currentSelection.Name,
+		Node = selectedNode,
+	}
 end
 
 return Util
